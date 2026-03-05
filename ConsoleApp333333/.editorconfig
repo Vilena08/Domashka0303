@@ -1,0 +1,22 @@
+﻿root = true
+
+[*.cs]
+# Отступы в 2 пробела
+indent_style = space
+indent_size = 2
+
+# Скобки всегда на той же строке
+csharp_new_line_before_open_brace = none
+csharp_new_line_before_else = none
+csharp_new_line_before_catch = none
+
+# lowerCamelCase для локальных переменных
+dotnet_naming_rule.locals_should_be_camel_case.severity = error
+dotnet_naming_rule.locals_should_be_camel_case.symbols = locals_symbol_group
+dotnet_naming_rule.locals_should_be_camel_case.style = camel_case_style
+
+dotnet_naming_symbols.locals_symbol_group.applicable_kinds = local
+dotnet_naming_style.camel_case_style.capitalization = camel_case
+
+# Запрет на использование var
+csharp_style_var_for_built_in_types = false:error
